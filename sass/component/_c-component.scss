@@ -1,0 +1,40 @@
+$component-name: 'c-component';
+
+.#{$component-name} {
+  --component-color: green;
+
+  background: linear-gradient(0, #232323 0%, #36364e 100%);
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: rem-calc(300);
+  justify-content: space-around;
+  left: 50%;
+  margin: $global-module-size 0;
+  padding: $global-module-size;
+  position: relative;
+  transform: translateX(-50%);
+  width: rem-calc(600);
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__cta {
+    background-color: var(--component-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    max-width: rem-calc(150);
+    padding: ($global-module-size / 2) $global-module-size;
+
+    &:hover {
+      filter: drop-shadow(0 0 rem-calc(6) var(--component-color));
+    }
+  }
+}
